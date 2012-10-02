@@ -19,7 +19,7 @@ testmovement.py:
 	This is an example program showing off a series of turns and moves
 	with brief pauses between each action
 
-PyBot Framework Usage -- botwrapper
+PyBot Framework Usage -- botwrapper.py
 ==================================
 
 The recommended usage of PyBot is via botwrapper.py. To use botwrapper, import
