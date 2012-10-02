@@ -30,6 +30,7 @@ def move(dist):
             trail.append((x, getY()))
 
     bot.move(dist)
+    bot.checkBounds((-9, -9, 9, 9))
 
 def getX():
     x, y = bot.getPos()

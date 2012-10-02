@@ -11,6 +11,19 @@ class Robot:
         self.posY = 0
         self.direction = Direction.UP
 
+    def checkBounds(self, bounds):
+        if self.posX < bounds[0]:
+            self.posX = bounds[0]
+
+        if self.posY < bounds[1]:
+            self.posY = bounds[1]
+
+        if self.posX > bounds[2]:
+            self.posX = bounds[2]
+
+        if self.posY > bounds[3]:
+            self.posY = bounds[3]
+
     def move(self, dist):
         if self.direction == Direction.UP:
             self.posY += dist

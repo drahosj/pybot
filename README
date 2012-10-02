@@ -19,8 +19,8 @@ testmovement.py:
 	This is an example program showing off a series of turns and moves
 	with brief pauses between each action
 
-PyBot Framework Usage
-=====================
+PyBot Framework Usage -- botwrapper
+==================================
 
 The recommended usage of PyBot is via botwrapper.py. To use botwrapper, import
 it and access its functions.
@@ -77,3 +77,45 @@ to do this:
 
 The example testmovement.py uses the former method, which is also recommended
 to save typing in an interactive session.
+
+PyBot Framework Usage -- robot
+=============================
+
+robot.py is the object-oriented backend to botwrapper. It provides an advanced
+way to use the PyBot Framework. It is necessary to do fun stuff like manage
+multiple robots. 
+
+The primary purpose of robot.py is to define the Robot class. You can access 
+this class directly by importing the module robot:
+
+	import robot
+	bot = robot.Robot
+
+The robot module is imported indirectly by botwrapper.
+
+The robot module also defines class Direction. This class simply contains four
+constants reprenenting direction:
+	
+	Direction.UP
+	Direction.DOWN
+	Direction.LEFT
+	Direction.RIGHT
+
+The Robot class has several methods and values:
+
+posX
+posY
+direction
+
+checkBounds(bounds)
+move(dist)
+turnLeft()
+turnRight()
+getPos()
+
+checkBounds(bounds) - Pass a 4-element tuple to checkBounds in the form (xmin,
+ymin, xmax, ymax) and it will constrain and revert the robot to those bounds.
+
+getPos() - returns a two-element tuple in the form (posX, posY)
+
+Upon initialization, a Robot "spawns" at (0,0)
