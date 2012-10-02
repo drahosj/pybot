@@ -78,7 +78,7 @@ to do this:
 The example testmovement.py uses the former method, which is also recommended
 to save typing in an interactive session.
 
-PyBot Framework Usage -- robot
+PyBot Framework Usage -- robot.py
 =============================
 
 robot.py is the object-oriented backend to botwrapper. It provides an advanced
