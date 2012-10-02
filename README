@@ -1,0 +1,79 @@
+PyBot Framework README
+=====================
+
+This framework contains three python files.
+
+	-robot.py
+	-botwrapper.py
+	-testmovement.py
+
+robot.py:
+	Robot.py is the backend class file containing the robot class and 
+	direction constants
+
+botwrapper.py:
+	This contains functions for easily manipulating a single robot and 
+	graphically displaying it on a map
+
+testmovement.py:
+	This is an example program showing off a series of turns and moves
+	with brief pauses between each action
+
+PyBot Framework Usage
+=====================
+
+The recommended usage of PyBot is via botwrapper.py. To use botwrapper, import
+it and access its functions.
+
+Botwrapper defines the following functions:
+
+turnLeft()
+turnRight()
+move(dist)
+getX()
+getY()
+getDir() 	- Returns int constant for direction. Used behind the scenes
+getDirS()	- Returns the direction in a string
+inTrail(point)	- Returns true if a tuple point is in the trail.
+printMap()
+
+In addition, botwrapper defines the following constants:
+
+UP
+DOWN
+LEFT
+RIGHT
+
+and the following variables
+
+trail
+bot
+
+The variable bot is initialized to a robot.Robot()
+
+If you take care to avoid name conflicts, you can safely 
+
+	from botwrapper import *
+
+and call the functions without prefixing botwrapper.
+
+For example:
+
+	from botwrapper import *
+
+	turnLeft()
+	move(5)
+	printMap()
+
+If you do now wish to import *, you can simply import botwrapper. Note that you
+will need to prefix each botwrapper function with botwrapper. should you choose
+to do this:
+
+	import botwrapper
+
+	botwrapper.turnLeft()
+	botwrapper.move(5)
+	botwrapper.printMap()
+
+The example testmovement.py uses the former method, which is also recommended
+to save typing in an interactive session.
