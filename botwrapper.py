@@ -25,7 +25,7 @@ def move(dist):
     elif bot.direction == LEFT:
         for x in reversed(range(getX() - dist, getX())):
             trail.append((x, getY()))
-    if bot.direction == RIGHT:
+    elif bot.direction == RIGHT:
         for x in range(getX(), getX() + dist):
             trail.append((x, getY()))
 
